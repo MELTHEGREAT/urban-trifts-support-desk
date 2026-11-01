@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urban Trifts Support Desk</title>
+<link rel="stylesheet" href="ChatPanel.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f4f6f5; color: #1d2422; }
+  header { background: #2f6f5e; color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  header h1 { margin: 0; font-size: 1.1rem; }
+  header span { font-size: 0.85rem; opacity: 0.85; }
+  main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 640px); gap: 20px; align-items: start; }
+  @media (max-width: 900px) { main { grid-template-columns: minmax(0, 1fr); } }
+  h2 { font-size: 0.95rem; margin: 0 0 10px; }
+  .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .tile { background: #fff; border: 1px solid #dfe3e1; border-radius: 10px; padding: 14px; }
+  .tile b { display: block; font-size: 1.5rem; }
+  .tile small { color: #66706c; }
+  .panel { background: #fff; border: 1px solid #dfe3e1; border-radius: 10px; padding: 14px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #eceff0; white-space: nowrap; }
+  th { color: #66706c; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pill { padding: 2px 9px; border-radius: 999px; font-size: 0.78rem; }
+  .open { background: #fdecec; color: #8a1f1f; }
+  .pending { background: #fff6e0; color: #6b4e00; }
+  .solved { background: #e3f3ea; color: #1d5a39; }
+  .sample { color: #66706c; font-size: 0.8rem; margin: 10px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Urban Trifts Support Desk</h1>
+  <span>Dashboard</span>
+</header>
+<main>
+  <section>
+    <div class="tiles">
+      <div class="tile"><b>12</b><small>Open tickets</small></div>
+      <div class="tile"><b>5</b><small>Waiting on customer</small></div>
+      <div class="tile"><b>31</b><small>Solved this week</small></div>
+    </div>
+    <div class="panel">
+      <h2>Recent tickets</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Customer</th><th>Subject</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>#1042</td><td>Maria S.</td><td>Where is my order?</td><td><span class="pill open">Open</span></td></tr>
+          <tr><td>#1041</td><td>Daniel K.</td><td>Wrong size received</td><td><span class="pill pending">Pending</span></td></tr>
+          <tr><td>#1040</td><td>Aisha R.</td><td>Return label request</td><td><span class="pill open">Open</span></td></tr>
+          <tr><td>#1039</td><td>Lee W.</td><td>Change delivery address</td><td><span class="pill solved">Solved</span></td></tr>
+          <tr><td>#1038</td><td>Joy P.</td><td>Discount code not working</td><td><span class="pill solved">Solved</span></td></tr>
+        </tbody>
+      </table>
+      <p class="sample">Sample data for layout only. Replace with your real tickets later.</p>
+    </div>
+  </section>
+  <div id="root"></div>
+</main>
+<script src="config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
+<script type="text/babel" data-presets="react" src="app.jsx"></script>
+</body>
+</html>
