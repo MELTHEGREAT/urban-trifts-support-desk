@@ -2,6 +2,6 @@
 // apiBase: the HTTPS tunnel address of your chat server (no trailing slash).
 // accessKey: must match CHAT_ACCESS_KEY on the server. Leave "" if you did not set one.
 window.CHAT_CONFIG = {
-  apiBase: "https://vector-louisville-comes-influence.trycloudflare.com",
+  apiBase: "https://acoustic-thank-intended-pepper.trycloudflare.com ",
   accessKey: "",
 };
